@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./osszegezes_01.css"
+        />
+        <title>Összegzés tétele 1. (Számok)</title>
+    </head>
+    <body>
+        <h1><a href="../index.html">Összegzés tétele 1. (Számok)</a></h1>
+        <h3>
+            Adjuk meg egy számokból álló tömb, lista (iterálható adatszerkezet)
+            elemeinek az összegét.
+        </h3>
+        <div id="dobozok">
+            <div id="gyujto-doboz"></div>
+        </div>
+        <div id="gomb-tarto">
+            <button
+                onclick="osszegzes()"
+                id="gomb"
+            >
+                Összegzés
+            </button>
+        </div>
+        <h2>Megoldás programozási nyelveken:</h2>
+        <div>
+            <div class="leiras">
+                <h4>JavaScript:</h4>
+                <p>let tomb = [<span id="javascript-tomb"></span>];</p>
+                <p>let osszeg = 0;</p>
+                <p>for (let i = 0; i &lt; tomb.length; i++) {</p>
+                <p class="behuzas">osszeg += tomb[i];</p>
+                <p>}</p>
+                <p>console.log(`A tömb elemeinek összege: ${osszeg}`);</p>
+            </div>
+            <div class="leiras">
+                <h4>C#:</h4>
+                <p>int[] tomb = { <span id="csharp-tomb"></span> };</p>
+                <p>int osszeg = 0;</p>
+                <p>for (int i = 0; i &lt; tomb.Length; i++) {</p>
+                <p class="behuzas">osszeg += tomb[i];</p>
+                <p>}</p>
+                <p>Console.WriteLine($"A tömb elemeinek összege: {osszeg}");</p>
+            </div>
+            <div class="leiras">
+                <h4>Python:</h4>
+                <p>tomb = [<span id="python-tomb"></span>]</p>
+                <p>osszeg = 0</p>
+                <p>for i in range(len(tomb)):</p>
+                <p class="behuzas">osszeg += tomb[i]</p>
+                <p>print(f"A tömb elemeinek összege: {osszeg}")</p>
+            </div>
+        </div>
+        <script src="./osszegzes_01.js"></script>
+    </body>
+</html>

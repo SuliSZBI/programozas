@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./szetvalogatas.css"
+        />
+        <title>Szétválogatás tétele</title>
+    </head>
+    <body>
+        <h1><a href="../index.html">Szétválogatás tétele</a></h1>
+        <h3>
+            Válogassuk szét egy számokból álló tömb, lista (iterálható
+            adatszerkezet) elemeit páros és páratlan számokra. Tároljuk ezeket
+            külön-külön adatszerkezetben!
+        </h3>
+        <div id="dobozok"></div>
+        <div id="gomb-tarto">
+            <button
+                onclick="szetvalogatas()"
+                id="gomb"
+            >
+                Szétválogatás
+            </button>
+        </div>
+        <h2>Megoldás programozási nyelveken:</h2>
+        <div>
+            <div class="leiras">
+                <h4>JavaScript:</h4>
+                <p>let tomb = [<span id="javascript-tomb"></span>];</p>
+                <p>let paros = [];</p>
+                <p>let paratlan = [];</p>
+                <p>for (let i = 0; i &lt; tomb.length; i++) {</p>
+                <p class="behuzas kiemel">
+                    let feltetel = (tomb[i] % 2 === 0);
+                </p>
+                <p class="behuzas">if (feltetel) {</p>
+                <p class="dupla-behuzas">paros.push(tomb[i]);</p>
+                <p class="behuzas">} else {</p>
+                <p class="dupla-behuzas">paratlan.push(tomb[i]);</p>
+                <p class="behuzas">}</p>
+                <p>}</p>
+                <p>console.log(`A tömb páros elemei: ${paros}`);</p>
+                <p>console.log(`A tömb páratlan elemei: ${paratlan}`);</p>
+            </div>
+            <div class="leiras">
+                <h4>C#:</h4>
+                <p>int[] tomb = { <span id="csharp-tomb"></span> };</p>
+                <p>List&lt;int&gt; paros = new List&lt;int&gt;();</p>
+                <p>List&lt;int&gt; paratlan = new List&lt;int&gt;();</p>
+                <p>for (int i = 0; i &lt; tomb.Length; i++) {</p>
+                <p class="behuzas kiemel">
+                    bool feltetel = (tomb[i] % 2 == 0);
+                </p>
+                <p class="behuzas">if (feltetel) {</p>
+                <p class="dupla-behuzas">paros.Add(tomb[i]);</p>
+                <p class="behuzas">} else {</p>
+                <p class="dupla-behuzas">paratlan.Add(tomb[i]);</p>
+                <p class="behuzas">}</p>
+                <p>}</p>
+                <p>Console.WriteLine($"A tömb páros elemei: ");</p>
+                <p>paros.ForEach(elem => Console.WriteLine(elem));</p>
+                <p>Console.WriteLine($"A tömb páratlan elemei: ");</p>
+                <p>paratlan.ForEach(elem => Console.WriteLine(elem));</p>
+            </div>
+            <div class="leiras">
+                <h4>Python:</h4>
+                <p>tomb = [<span id="python-tomb"></span>]</p>
+                <p>paros = []</p>
+                <p>paratlan = []</p>
+                <p>for i in range(len(tomb)):</p>
+                <p class="behuzas kiemel">feltetel = (tomb[i] % 2 == 0)</p>
+                <p class="behuzas">if (feltetel):</p>
+                <p class="dupla-behuzas">paros.append(tomb[i])</p>
+                <p class="behuzas">else:</p>
+                <p class="dupla-behuzas">paratlan.append(tomb[i])</p>
+                <p>print(f"A tömb páros elemei: {paros}")</p>
+                <p>print(f"A tömb páratlan elemei: {paratlan}")</p>
+            </div>
+        </div>
+        <script src="./szetvalogatas.js"></script>
+    </body>
+</html>

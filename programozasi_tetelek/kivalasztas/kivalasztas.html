@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./kivalasztas.css"
+        />
+        <title>Kiválasztás tétele</title>
+    </head>
+    <body>
+        <h1><a href="../index.html">Kiválasztás tétele</a></h1>
+        <h3>
+            Adjuk meg, hogy egy számokból álló tömb, lista (iterálható
+            adatszerkezet) hányadik helyen tartalmazza a 73-as számot.
+        </h3>
+        <div id="dobozok">
+            <div id="gyujto-doboz"></div>
+        </div>
+        <div id="gomb-tarto">
+            <button
+                onclick="kivalasztas()"
+                id="gomb"
+            >
+                Kiválasztás
+            </button>
+        </div>
+        <h2>Megoldás programozási nyelveken:</h2>
+        <div>
+            <div class="leiras">
+                <h4>JavaScript:</h4>
+                <p>let tomb = [<span id="javascript-tomb"></span>];</p>
+                <p>let index = 0;</p>
+                <p>for (let i = 0; i &lt; tomb.length; i++) {</p>
+                <p class="behuzas kiemel">let feltetel = (tomb[i] === 73);</p>
+                <p class="behuzas">if (feltetel) {</p>
+                <p class="dupla-behuzas">index = i;</p>
+                <p class="dupla-behuzas">break;</p>
+                <p class="behuzas">}</p>
+                <p>}</p>
+                <p>console.log(`A 73-as számhoz tartozó index: ${index}`);</p>
+            </div>
+            <div class="leiras">
+                <h4>C#:</h4>
+                <p>int[] tomb = { <span id="csharp-tomb"></span> };</p>
+                <p>int index = 0;</p>
+                <p>for (int i = 0; i &lt; tomb.Length; i++) {</p>
+                <p class="behuzas kiemel">bool feltetel = (tomb[i] == 73);</p>
+                <p class="behuzas">if (feltetel) {</p>
+                <p class="dupla-behuzas">index = i;</p>
+                <p class="dupla-behuzas">break;</p>
+                <p class="behuzas">}</p>
+                <p>}</p>
+                <p>
+                    Console.WriteLine($"A 73-as számhoz tartozó index:
+                    {index}");
+                </p>
+            </div>
+            <div class="leiras">
+                <h4>Python:</h4>
+                <p>tomb = [<span id="python-tomb"></span>]</p>
+                <p>index = 0</p>
+                <p>for i in range(len(tomb)):</p>
+                <p class="behuzas kiemel">feltetel = (tomb[i] == 73)</p>
+                <p class="behuzas">if (feltetel):</p>
+                <p class="dupla-behuzas">index = i</p>
+                <p class="dupla-behuzas">break</p>
+                <p>print(f"A 73-as számhoz tartozó index: {letezik}")</p>
+            </div>
+        </div>
+        <script src="./kivalasztas.js"></script>
+    </body>
+</html>

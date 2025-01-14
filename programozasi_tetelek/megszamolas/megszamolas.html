@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./megszamolas.css"
+        />
+        <title>Megszámolás tétele</title>
+    </head>
+    <body>
+        <h1><a href="../index.html">Megszámolás tétele</a></h1>
+        <h3>
+            Adjuk meg egy számokból álló tömb, lista (iterálható adatszerkezet)
+            elemeinek a számát.
+        </h3>
+        <div id="dobozok">
+            <div id="gyujto-doboz"></div>
+        </div>
+        <div id="gomb-tarto">
+            <button
+                onclick="megszamolas()"
+                id="gomb"
+            >
+                Megszámolás
+            </button>
+        </div>
+        <h2>Megoldás programozási nyelveken:</h2>
+        <div>
+            <div class="leiras">
+                <h4>JavaScript:</h4>
+                <p>let tomb = [<span id="javascript-tomb"></span>];</p>
+                <p>let darab = 0;</p>
+                <p>for (let i = 0; i &lt; tomb.length; i++) {</p>
+                <p class="behuzas">darab++;</p>
+                <p>}</p>
+                <p>console.log(`A tömb elemeinek száma: ${darab}`);</p>
+            </div>
+            <div class="leiras">
+                <h4>C#:</h4>
+                <p>int[] tomb = { <span id="csharp-tomb"></span> };</p>
+                <p>int darab = 0;</p>
+                <p>for (int i = 0; i &lt; tomb.Length; i++) {</p>
+                <p class="behuzas">darab++;</p>
+                <p>}</p>
+                <p>Console.WriteLine($"A tömb elemeinek száma: {darab}");</p>
+            </div>
+            <div class="leiras">
+                <h4>Python:</h4>
+                <p>tomb = [<span id="python-tomb"></span>]</p>
+                <p>darab = 0</p>
+                <p>for i in range(len(tomb)):</p>
+                <p class="behuzas">darab += 1</p>
+                <p>print(f"A tömb elemeinek száma: {darab}")</p>
+            </div>
+        </div>
+        <script src="./megszamolas.js"></script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="./osszegezes_02.css"
+        />
+        <title>Összegzés tétele 2. (Sztringek)</title>
+    </head>
+    <body>
+        <h1><a href="../index.html">Összegzés tétele 2. (Sztringek)</a></h1>
+        <h3>
+            Adjuk meg egy sztringekből álló tömb, lista (iterálható objektum)
+            elemeiből képzett mondatot.
+        </h3>
+        <div id="dobozok">
+            <div id="gyujto-doboz"></div>
+        </div>
+        <div>
+            <button
+                onclick="osszegzes()"
+                id="gomb"
+            >
+                Összegzés
+            </button>
+        </div>
+        <h2>Megoldás programozási nyelveken:</h2>
+        <div>
+            <div class="leiras">
+                <h4>JavaScript:</h4>
+                <p>let tomb = [<span id="javascript-tomb"></span>];</p>
+                <p>let mondat = '';</p>
+                <p>for (let i = 0; i &lt; tomb.length; i++) {</p>
+                <p class="behuzas">mondat += `${tomb[i]} `;</p>
+                <p>}</p>
+                <p>
+                    console.log(`A tömb elemeiből képzett mondat: ${mondat}`);
+                </p>
+            </div>
+            <div class="leiras">
+                <h4>C#:</h4>
+                <p>string[] tomb = { <span id="csharp-tomb"></span> };</p>
+                <p>string mondat = "";</p>
+                <p>for (int i = 0; i &lt; tomb.Length; i++) {</p>
+                <p class="behuzas">mondat += $"{tomb[i]} ";</p>
+                <p>}</p>
+                <p>
+                    Console.WriteLine($"A tömb elemeiből képzett mondat:
+                    {mondat}");
+                </p>
+            </div>
+            <div class="leiras">
+                <h4>Python:</h4>
+                <p>tomb = [<span id="python-tomb"></span>]</p>
+                <p>mondat = ""</p>
+                <p>for i in range(len(tomb)):</p>
+                <p class="behuzas">mondat += f"{tomb[i]} "</p>
+                <p>print(f"A tömb elemeiből képzett mondat: {mondat}")</p>
+            </div>
+        </div>
+        <script src="./osszegzes_02.js"></script>
+    </body>
+</html>
