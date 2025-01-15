@@ -13,25 +13,24 @@
         />
         <link
             rel="stylesheet"
-            href="./eldontes.css"
+            href="./kivalogatas.css"
         />
-        <title>Eldöntés tétele</title>
+        <title>Kiválogatás tétele</title>
     </head>
     <body>
-        <h1><a href="../index.html">Eldöntés tétele</a></h1>
+        <h1><a href="../index.html">Kiválogatás tétele</a></h1>
         <h3>
-            Adjuk meg, hogy egy számokból álló tömb, lista (iterálható
-            adatszerkezet) tartalmazza-e a 73-as számot.
+            Válogassuk ki egy számokból álló tömb, lista (iterálható
+            adatszerkezet) elemei közül azokat egy másik tömbbe, listába
+            (iterálható adatszerkezetbe), amelyek hárommal oszhatóak.
         </h3>
-        <div id="dobozok">
-            <div id="gyujto-doboz"></div>
-        </div>
+        <div id="dobozok"></div>
         <div id="gomb-tarto">
             <button
-                onclick="eldontes()"
+                onclick="kivalogatas()"
                 id="gomb"
             >
-                Eldöntés
+                Kiválogatás
             </button>
         </div>
         <h2>Megoldás programozási nyelveken:</h2>
@@ -39,47 +38,48 @@
             <div class="leiras">
                 <h4>JavaScript:</h4>
                 <p>let tomb = [<span id="javascript-tomb"></span>];</p>
-                <p>let letezik = false;</p>
+                <p>let harommalOszthato = [];</p>
                 <p>for (let i = 0; i &lt; tomb.length; i++) {</p>
-                <p class="behuzas kiemel">let feltetel = (tomb[i] === 73);</p>
+                <p class="behuzas kiemel">
+                    let feltetel = (tomb[i] % 3 === 0);
+                </p>
                 <p class="behuzas">if (feltetel) {</p>
-                <p class="dupla-behuzas">letezik = true;</p>
-                <p class="dupla-behuzas">break;</p>
+                <p class="dupla-behuzas">harommalOszthato.push(tomb[i]);</p>
                 <p class="behuzas">}</p>
                 <p>}</p>
                 <p>
-                    console.log(`A tömb tartalmazza a 73-as számot:
-                    ${letezik}`);
+                    console.log(`A kiválogatott tömb elemei:
+                    ${harommalOszthato}`);
                 </p>
             </div>
             <div class="leiras">
                 <h4>C#:</h4>
                 <p>int[] tomb = { <span id="csharp-tomb"></span> };</p>
-                <p>bool letezik = false;</p>
+                <p>List&lt;int&gt; harommalOszthato = new List&lt;int&gt;();</p>
                 <p>for (int i = 0; i &lt; tomb.Length; i++) {</p>
-                <p class="behuzas kiemel">bool feltetel = (tomb[i] == 73);</p>
+                <p class="behuzas kiemel">
+                    bool feltetel = (tomb[i] % 3 == 0);
+                </p>
                 <p class="behuzas">if (feltetel) {</p>
-                <p class="dupla-behuzas">letezik = true;</p>
-                <p class="dupla-behuzas">break;</p>
+                <p class="dupla-behuzas">harommalOszthato.Add(tomb[i]);</p>
                 <p class="behuzas">}</p>
                 <p>}</p>
+                <p>Console.WriteLine("A kiválogatott tömb elemei: ");</p>
                 <p>
-                    Console.WriteLine($"A tömb tartalmazza a 73-as számot:
-                    {letezik}");
+                    harommalOszthato.ForEach(elem => Console.WriteLine(elem));
                 </p>
             </div>
             <div class="leiras">
                 <h4>Python:</h4>
                 <p>tomb = [<span id="python-tomb"></span>]</p>
-                <p>letezik = False</p>
+                <p>harommalOszthato = []</p>
                 <p>for i in range(len(tomb)):</p>
-                <p class="behuzas kiemel">feltetel = (tomb[i] == 73)</p>
+                <p class="behuzas kiemel">feltetel = (tomb[i] % 3 == 0)</p>
                 <p class="behuzas">if (feltetel):</p>
-                <p class="dupla-behuzas">letezik = True</p>
-                <p class="dupla-behuzas">break</p>
-                <p>print(f"A tömb tartalmazza a 73-as számot: {letezik}")</p>
+                <p class="dupla-behuzas">harommalOszthato.append(tomb[i])</p>
+                <p>print(f"A kiválogatott tömb elemei: {harommalOszthato}")</p>
             </div>
         </div>
-        <script src="./eldontes.js"></script>
+        <script src="./kivalogatas.js"></script>
     </body>
 </html>

@@ -50,17 +50,15 @@ pythonTomb.innerText = tombElemek;
 
 let szamlalo = 0;
 let parosSzamlalo = 0;
-let paratlanSzamlalo = 0;
 
-function szetvalogatas() {
-    if (ertekek[szamlalo] % 2 === 0) {
+function kivalogatas() {
+    if (ertekek[szamlalo] % 3 === 0) {
         alsoBoxes[szamlalo].style.left = `${parosSzamlalo * 50}px`;
         alsoBoxes[szamlalo].style.top = `90px`;
+        kozepsoBoxes[szamlalo].style.color = `white`;
         parosSzamlalo++;
     } else {
-        alsoBoxes[szamlalo].style.left = `${paratlanSzamlalo * 50}px`;
-        alsoBoxes[szamlalo].style.top = `130px`;
-        paratlanSzamlalo++;
+        alsoBoxes[szamlalo].style.color = `white`;
     }
 
     alsoBoxes[szamlalo].style.transition = 'all 1.5s';

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+body {
+    font-family: 'Fredoka', serif;
+}
+
+#dobozok {
+    position: relative;
+    height: 140px;
+}
+
+.doboz {
+    display: flex;
+    position: absolute;
+    height: 65px;
+    top: 0px;
+    width: 40px;
+    z-index: 1;
+}
+
+.felso-doboz {
+    align-items: center;
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    width: 40px;
+    z-index: 1;
+}
+
+.kozepso-doboz {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    border: 1px solid black;
+    height: 30px;
+    justify-content: center;
+    top: 35px;
+    width: 40px;
+    z-index: 1;
+}
+
+.also-doboz {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    border: 1px solid black;
+    height: 30px;
+    justify-content: center;
+    top: 35px;
+    width: 40px;
+    z-index: 1;
+}
+
+.masolt-doboz {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    border: 1px solid black;
+    height: 30px;
+    justify-content: center;
+    top: 100px;
+    width: 40px;
+    z-index: 10;
+}
+
+button {
+    font-family: 'Fredoka', serif;
+}
+
+.leiras {
+    border: 1px solid black;
+    margin-bottom: 1em;
+    padding: 0px 1em;
+}
+
+.behuzas {
+    text-indent: 20px;
+}
+
+.kiemel {
+    color: red;
+    font-weight: 600;
+}
+
+.dupla-behuzas {
+    text-indent: 40px;
+}
+
+#gomb-tarto {
+    margin: 1em 0px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
